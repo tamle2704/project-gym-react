@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.contact .row {
+    justify-content: center;
+}
+.logo-box {
+    margin-bottom: 2rem;
+}
+.logo-box > img {
+    max-width: 85px;
+    display: block;
+}
+.text {
+    text-align: center;
+    word-wrap: break-word;
+}
+.text h3 {
+    white-space: pre-wrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+}
+.address-box, .contact-box, .open-box {
+    border: 4px solid #d92329;
+    border-radius: 15px;
+    height: 280px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+.img-form {
+    margin-bottom: 1rem;
+}
+.form-reg .new-header {
+    margin-bottom: 1rem !important;
+}
+.new-header > h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+hr {
+    width: 150px;
+    height: 3px;
+    background: #d92329;
+    margin: 20px 0;
+}
+.form, .map, .contact {
+    margin-bottom: 3rem;
+}
+.form .row {
+    margin: 0 0px;
+}
+label {
+    margin-bottom: .2rem;;
+}

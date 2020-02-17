@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.item {
+    margin-top: 20px;
+}
+
+.current {
+    background-color: #d92329;
+    color: white;
+}
+.course .row {
+    justify-content: center;
+}
+.course .btn {
+    margin: 0.5rem 1rem;
+}
+.item {
+    position: relative;
+    border-radius: 5px;
+}
+.title-course {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0px 0px 0px -50% ;
+    padding: 0 30px;
+}
+.name-course {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: white;
+}
+.course-item {
+    position: relative;
+    overflow: hidden;
+}
+.course-content {
+    margin: 0 15px;
+    position: absolute;
+    opacity: 0;
+    background-color: #d92329;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-out;
+}
+.course-content h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: white;
+}
+.course-item:hover .course-content {
+    opacity: 0.6;
+    padding: 0 15px;
+}
+.course-item:hover .title-course {
+    display: none;
+}
+.box-schedule {
+    padding: 30px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #f8e6ff;
+    border: 1px solid black;
+}
+.icon {
+    width: 80px;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+    text-align: center;
+}
+.time {
+    font-size: 20px;
+    margin: auto;
+    width: 80%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.schedule-content h2 {
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: #322b40;
+    display: block;
+    letter-spacing: 0.5px;
+    margin: 20px auto;
+}
+.trainer-name {
+    color: #d92329;
+    font-size: 18px;
+    font-weight: 600;
+}
+.time, .trainer-name {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.filter-button {
+    padding: 5px 30px;
+}
+.active-button {
+    background-color: #d92329 !important;
+    border: none;
+}
+
+nav > .nav.nav-tabs {
+    border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active {
+    border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+nav > div a.nav-item.nav-link.active {
+    background: #d92329;
+}
+.tab-content {
+    background: #fdfdfd;
+    line-height: 25px;
+    border-top:5px solid #d92329;
+    border-bottom:5px solid #d92329;
+    padding:30px 25px;
+}
+  
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus {
+    border: none;
+    background: #d92329;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+.card-img {
+    position: relative;
+}
+.card-sale img {
+    position: absolute;
+    max-width: 100px;
+    top: -4px;
+    left: 12px;
+}
+.card-item .row {
+    padding: 0;
+}
+.card-content {
+    padding: 10px;
+}
+.card-content h3 {
+    font-size: 26px;
+    font-weight: bold;
+}
+.card-content p {
+    font-size: 1.1em;
+}
+.more-card {
+    margin: 10px auto;
+}
+.btn-red {
+    display: block;
+    background-color: #d92329;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+.btn-red:hover {
+    background-color: ;
+}
+.promotion ul {
+    list-style-type: none;
+}
+.promotion h4 {
+    font-weight: bold;
+}
+.promotion li {
+    font-size: 17px;
+    font-weight: 600;
+}
+.card-set .title-card {
+    font-size: 20px;
+    font-weight: 550;
+}
+.title-banner-kickfit {
+    padding-top: 300px;
+    margin-right: 25px;
+    font-size: 90px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}
+@media (max-width: 1280px) and (min-width: 1024px){
+    .title-banner-kickfit {
+        font-size: 80px;
+        padding-top: 220px;
+    }   
+}
+@media (max-width: 1023px) and (min-width: 768px){
+    .title-banner-kickfit {
+        font-size: 60px;
+        padding-top: 200px;
+    }   
+}
+@media (max-width: 767px) and (min-width: 481px){
+    .title-banner-kickfit {
+        font-size: 45px;
+        padding-top: 180px;
+    }
+}   
+@media (max-width: 480px) and (min-width: 210px){
+    .title-banner-kickfit {
+        font-size: 35px;
+        padding-top: 160px;
+    }
+}  
+.learn-more {
+    background-image: url(../img/banner/bg-learnmore.jpg);
+    background-size: cover;
+    padding: 120px 0;
+    color: #fff;
+}
+.title-txt {
+    font-size: 2.1em;
+    line-height: 1.4;
+}
+.content-txt {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.divider {
+    height: 3px;
+    background: #d92329;
+    border: none;
+    margin: 25px 0 40px;
+    width: 110px;
+    display: block;
+    clear: both;
+}
+.about-more {
+    background: url(../img/banner/bg-about.jpg) center top no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 70px 0;
+}
+.boxing {
+    background: url(../img/banner/bg-about.jpg) center top no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+}
+ul.effective-list {
+    list-style: none;
+    font-size: 18px;
+}
+ul.effective-list li {
+    margin: 7px 0;
+    position: relative;
+}
+ul.effective-list li::before {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    content: "";
+    background: #d92329;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}

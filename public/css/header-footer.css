@@ -1,0 +1,280 @@
+.page-wrapper {
+    overflow: hidden;
+}
+.container {
+    max-width: 1280px;
+}
+.container-fluid {
+    padding: 0;
+}
+header {
+    background-color: #0F0E0E;
+}
+.menu {
+    padding: 10px;
+}
+.nav-item {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar-brand {
+    margin: 0;
+}
+.navbar-toggler {
+    color: #d92329;
+    border-color: #d92329 !important;
+}
+.navbar-toggler:active {
+    color: #d92329 !important;
+    border-color: #d92329 !important;
+}
+.navbar-toggler-icon {
+    color: #d92329;
+}
+nav .active a  {
+    color: #d92329 !important;
+    border-bottom: 1px solid #d92329;
+}
+.nav-item:hover a {
+    color: #d92329 !important;
+}
+.new-header {
+    margin-bottom: 2.5rem !important;
+}
+.new-header > h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+hr {
+    width: 150px;
+    height: 3px;
+    background: #d92329;
+    margin: 20px auto;
+}
+.course, .about-us, .trainer, .promo, .story, .highlight, .banner, .different, .counter, .value, .client, .carousel-index, .blog, .picture, .card-set, .preference, .main-blog {
+    margin-bottom: 3.5rem;
+}
+.banner {
+    height: 640px;
+}
+@media (max-width: 480px) and (min-width: 320px) {
+    .banner {
+        height: 340px;
+    }
+}
+@media (max-width: 767px) and (min-width: 481px) {
+    .banner {
+        height: 360px;
+    }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+    .banner {
+        height: 400px;
+    }
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+    .banner {
+        height: 500px;
+    }
+}
+.registration {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(../img/promo/registration.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+footer {
+    background-color: #1f1f1f;
+}
+footer .row {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.footer-menu .link-footer {
+    margin-left: 1.25rem;
+}
+.last-footer {
+    background-color: #0F0E0E;
+    padding: 10px 0;
+}
+.content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.content-footer .social-icon, .content-footer a {
+    font-size: 1.25rem;
+    color: white;
+}
+.content-footer .social-icon .fa-instagram {
+    margin: 0 10px;
+}
+#button {
+    display: inline-block;
+    background-color: #d92329;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+.carousel-index .slick-dots{
+    bottom: -5%;
+}
+.banner-index .slick-slide {
+    margin: 0;
+}
+.slick-slide {
+    margin: 0 10px;
+}
+.slick-next{
+    right: 2%;
+    z-index: 99;
+    color: #d92329;
+}
+.slick-prev {
+    left: 2%;
+    z-index: 99;
+    color: #d92329;
+}
+.banner-index .slick-prev:before, .banner-index .slick-next:before {
+    color: blue;
+}
+.banner-index .slick-next, .banner-index .slick-prev {
+    color: blue;
+}
+.slick-prev:before, .slick-next:before{
+    line-height: 0;
+    font-size: 5.555rem;
+    color: blue;
+}
+.slick-prev:hover:before, .slick-next:hover:before{
+    opacity: 0.8;
+}
+.slick-prev:before{
+    content: "‹";
+    opacity: 1;
+}
+.slick-next:before{
+    content: "›";
+    opacity: 1;
+}
+.slick-dots li{
+    margin: 0 20px;
+}
+.slick-dots li button:before{
+    font-size: 22px;
+    color: #BBBBBB;
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before{
+    color: black;
+    opacity: 1;
+}
+.title-banner {
+    padding-top: 300px;
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}
+@media (max-width: 1280px) and (min-width: 1024px){
+    .title-banner {
+        font-size: 80px;
+        padding-top: 220px;
+    }   
+}
+@media (max-width: 1023px) and (min-width: 768px){
+    .title-banner {
+        font-size: 60px;
+        padding-top: 200px;
+    }   
+}
+@media (max-width: 767px) and (min-width: 481px){
+    .title-banner {
+        font-size: 45px;
+        padding-top: 180px;
+    }
+}   
+@media (max-width: 480px) and (min-width: 210px){
+    .title-banner {
+        font-size: 35px;
+        padding-top: 160px;
+    }
+}  
+.modal {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.modal-dialog {
+    max-width: 800px;
+}
+.modal-body {
+    padding: 40px 40px 40px;
+    background: url(../img/promo/form-register.jpg) top center/cover no-repeat;
+    max-width: 800px;
+    position: relative;
+    border-radius: 5px;
+}
+.modal-body button.close {
+    background: url(../img/promo/close-btn.png) center center no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    opacity: 1;
+    top: 10px;
+    right: 10px;
+    z-index: 25;
+}
+.modal-body .form-inner {
+    max-width: 750px;
+    margin: 10px auto;
+}
+.headline h2 {
+    color: #d92329;
+}
+.input-group {
+    margin: 0 0 20px ;
+}
+.input-group-wrapper {
+    margin-top: 20px;
+}
+.form-inner .col-sm-7 {
+    background-color: rgba(255,255,255,.9);
+}
+.btn-regis {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+}
+
+.error {
+    margin-top: 5px;
+    color: #d92329;
+    font-size: 14px;
+}

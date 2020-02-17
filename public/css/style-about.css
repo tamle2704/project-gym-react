@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.registration {
+    margin-bottom: 3rem;
+}
+.content-hl {
+    margin: 10px 10px 50px 10px;
+}
+.highlight .row {
+    justify-content: center;
+}
+.icon {
+    width: 80px;
+    margin-bottom: 20px !important;
+}
+.title-icon {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+}
+.about-us {
+    background-color: #0F0E0E;
+}
+.about-us > .container > .row {
+    flex-direction: row-reverse;
+}
+.content-about {
+    padding: 50px 20px 20px 20px;
+}
+.title-h2 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+.title-h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+.content-p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+.btn-red {
+    background-color: #d92329;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+}
+.left {
+    flex-direction: row-reverse;
+}
+.content-dif {
+    margin-top: 20px;
+}
+
+.client {
+    background-color: #0F0E0E;
+    padding-top: 30px;
+}
+
+.box-trainer {
+    position: relative;
+    background: #000;
+}
+  
+.box-trainer .imgtrainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.box-trainer .content {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background: #FFFFFF;
+    opacity: 0.85;
+    transition: 0.5s;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+  
+.box-trainer:hover .content {
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+}
+  
+.box-trainer .content h3 {
+    color: black;
+    margin: 0.3rem 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 26px;
+    
+}
+  
+.box-trainer .content p {
+    margin: 1.2rem 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.5s;
+    text-align: justify;
+}
+  
+.box-trainer:hover .content p {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.card-set .title-card {
+    font-size: 22px !important;
+    font-weight: bold;
+}
+.testimonial-reel {
+    margin-bottom: 2rem !important;
+}
+.testimonial-reel .box {
+    position: relative;
+    margin-bottom: 30px;
+}
+.testimonial-reel .box .image {
+    margin: 0 auto -45px;
+    text-align: center;
+}
+.testimonial-reel .box .image img {
+    height: 130px;
+    margin: 0 auto;
+}
+.testimonial-reel .box .test-component {
+    background-color: #fff;
+    padding: 1rem 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-height: 200px;
+}
+.testimonial-reel .box .test-title {
+    color: #d92329;
+    text-align: center;
+    margin-top: 3.3rem;
+    margin-bottom: 15px;
+}
+.testimonial-reel .box .test-content {
+    text-align: center;
+    font-size: 18px;
+}
+.testimonial-reel .slick-slide {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.testimonial-reel .slick-cloned {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.testimonial-reel .slick-current.slick-active {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+@media (max-width: 480px) {
+    .testimonial-reel .box .test-component {
+        height: 480px;
+        overflow: hidden;
+    }
+    .testimonial-reel .slick-slide {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .slick-slide {
+        margin: 0;
+    }
+}
+.more-picture .modal-body {
+    max-width: 1500px;
+    padding: 10px;
+    background: none;
+}
+.more-picture .modal-dialog {
+    max-width: 1200px;
+}
+.more-picture .modal-body button.close {
+    top: -10px;
+    right: -10px;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    color: black;
+}

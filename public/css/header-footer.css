@@ -110,7 +110,7 @@ footer .row {
 .content-footer .social-icon .fa-instagram {
     margin: 0 10px;
 }
-#button {
+.AnyClassForContainer {
     display: inline-block;
     background-color: #d92329;
     width: 50px;
@@ -130,14 +130,14 @@ footer .row {
     color: #fff;
 }
 
-#button:hover {
+.AnyClassForContainer:hover {
     cursor: pointer;
     background-color: #333;
 }
-#button:active {
+.AnyClassForContainer:active {
     background-color: #555;
 }
-#button.show {
+.AnyClassForTransition {
     opacity: 1;
     visibility: visible;
 }
@@ -146,9 +146,10 @@ footer .row {
 }
 .banner-index .slick-slide {
     margin: 0;
+    padding: 0 !important;
 }
 .slick-slide {
-    margin: 0 10px;
+    padding: 0 10px;
 }
 .slick-next{
     right: 2%;

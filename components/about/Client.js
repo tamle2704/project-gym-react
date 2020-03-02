@@ -1,4 +1,33 @@
+import Slider from "react-slick";
+
 export default function Client() {
+  const settings = {
+    centerMode: true,
+    centerPadding: "40px",
+    slidesToShow: 1,
+    infinite: true,
+    arrows: true,
+    lazyLoad: "ondemand",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "15px"
+        }
+      }
+    ]
+  };
+
   return (
     <div>
       <section className="client">
@@ -12,7 +41,7 @@ export default function Client() {
             </div>
             <div className="row">
               <div className="col-12">
-                <div className="testimonial-reel">
+                <Slider {...settings} className="testimonial-reel">
                   <div className="box">
                     <figure className="image">
                       <img
@@ -187,7 +216,7 @@ export default function Client() {
                       </article>
                     </div>
                   </div>
-                </div>
+                </Slider>
               </div>
             </div>
           </div>

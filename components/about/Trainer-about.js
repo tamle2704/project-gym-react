@@ -1,4 +1,31 @@
+import Slider from "react-slick";
+
 export default function TrainerAbout() {
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1
+            }
+        }]
+  };
   return (
     <div>
       <section className="trainer">
@@ -11,7 +38,7 @@ export default function TrainerAbout() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="trainer-slide">
+              <Slider {...settings} className="trainer-slide">
                 <div className="box-trainer">
                   <div className="imgtrainer">
                     <img className="w-100" src="./img/hlv/trang tracy.jpg" />
@@ -91,7 +118,7 @@ export default function TrainerAbout() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Slider>
             </div>
           </div>
         </div>

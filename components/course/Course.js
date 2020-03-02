@@ -1,4 +1,26 @@
-export default function CourseJs() {
+import React, { useState, useEffect } from "react";
+
+export default function CourseJs({ data }) {
+  const [CourseJs, setCourseJs] = useState(data);
+  useEffect(() => {
+    const filter = document.getElementsByClassName("filter");
+    for (let i = 0; i < filter.length; i++) {
+      filter[i].style = "transform: scale(1);opacity: 1;transition: 0.5s;";
+    }
+  });
+  const filters = [
+    "Tất cả",
+    "Group-x",
+    "Giảm cân",
+    "Tăng cân",
+    "Võ thuật",
+    "Căng cơ"
+  ];
+  const onFilter = label => {
+    setActive(label);
+  };
+  const [active, setActive] = useState("Tất cả");
+
   return (
     <div>
       <section className="course">
@@ -8,143 +30,68 @@ export default function CourseJs() {
             <hr />
           </div>
           <div className="row">
-            <button
-              className="btn btn-secondary active-button filter-course"
-              data-filter="all"
-            >
-              Tất cả
-            </button>
-            <button
-              className="btn btn-secondary filter-course"
-              data-filter="groupx"
-            >
-              Group-X
-            </button>
-            <button
-              className="btn btn-secondary filter-course"
-              data-filter="weight-loss"
-            >
-              Giảm cân
-            </button>
-            <button
-              className="btn btn-secondary filter-course"
-              data-filter="weight-gain"
-            >
-              Tăng cân
-            </button>
-            <button
-              className="btn btn-secondary filter-course"
-              data-filter="martial-art"
-            >
-              Võ thuật
-            </button>
-            <button
-              className="btn btn-secondary filter-course"
-              data-filter="muscle"
-            >
-              Căng cơ
-            </button>
+            {filters.map(fil => (
+              <button
+                key={fil}
+                onClick={() => {
+                  if (active !== fil) {
+                    let filter = document.getElementsByClassName("filter");
+
+                    for (let i = 0; i < filter.length; i++) {
+                      filter[i].style =
+                        "transform: scale(0);opacity: 0;transition: 0.5s;";
+                    }
+                    setTimeout(() => {
+                      onFilter(fil);
+                    }, 500);
+                  }
+                }}
+                className={`btn btn-secondary ${
+                  fil === active ? "active-button" : ""
+                }`}
+              >
+                {fil}
+              </button>
+            ))}
           </div>
           <div className="row">
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter groupx">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/yoga.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">YOGA</h2>
-                </div>
-                <div className="course-content">
-                  <h1>YOGA</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter weight-loss">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/giamcan.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">GIẢM CÂN</h2>
-                </div>
-                <div className="course-content">
-                  <h1>GIẢM CÂN</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter weight-loss martial-art">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/kickfit.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">KICKFIT</h2>
-                </div>
-                <div className="course-content">
-                  <h1>KICFIT</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter weight-loss groupx">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/dance.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">DANCE</h2>
-                </div>
-                <div className="course-content">
-                  <h1>DANCE</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter muscle weight-gain weight-loss">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/hlcn.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">HUẤN LUYỆN CÁ NHÂN</h2>
-                </div>
-                <div className="course-content">
-                  <h1>HUẤN LUYỆN CÁ NHÂN</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter muscle">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/giamcangco.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">GIẢM CĂNG CƠ</h2>
-                </div>
-                <div className="course-content">
-                  <h1>GIẢM CĂNG CƠ</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter weight-gain weight-loss">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/battlerope.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">BATTLE ROPE</h2>
-                </div>
-                <div className="course-content">
-                  <h1>BATTLE ROPE</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter weight-gain weight-loss ">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/PTX2.png" />
-                <div className="title-course">
-                  <h2 className="name-course">PTX-2</h2>
-                </div>
-                <div className="course-content">
-                  <h1>PTX-2</h1>
-                </div>
-              </a>
-            </div>
-            <div className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter martial-art weight-loss weight-gain">
-              <a href="./kickfit.html">
-                <img className="w-100" src="img/course/muay.jpg" />
-                <div className="title-course">
-                  <h2 className="name-course">MUAY THÁI</h2>
-                </div>
-                <div className="course-content">
-                  <h1>MUAY THÁI</h1>
-                </div>
-              </a>
-            </div>
+            {CourseJs &&
+              CourseJs.map(course => {
+                for (let i in course.category) {
+                  if (
+                    active === "Tất cả" ||
+                    course.category[i]
+                      .toLowerCase()
+                      .normalize("NFD")
+                      .replace(/[\u0300-\u036f]/g, "")
+                      .replace(/đ/g, "d")
+                      .replace(/Đ/g, "D") ===
+                      active
+                        .toLowerCase()
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")
+                        .replace(/đ/g, "d")
+                        .replace(/Đ/g, "D")
+                  ) {
+                    return (
+                      <div
+                        key={course.id}
+                        className="item col-12 col-sm-6 col-md-4 col-lg-4 course-item filter"
+                      >
+                        <a href="./kickfit.html">
+                          <img className="w-100" src={course.images} />
+                          <div className="title-course">
+                            <h2 className="name-course">{course.name}</h2>
+                          </div>
+                          <div className="course-content">
+                            <h1>{course.name}</h1>
+                          </div>
+                        </a>
+                      </div>
+                    );
+                  }
+                }
+              })}
           </div>
         </div>
       </section>

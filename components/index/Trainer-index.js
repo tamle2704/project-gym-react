@@ -1,4 +1,34 @@
-export default function TrainerIndex() {
+import Slider from "react-slick";
+import React, { useState } from "react";
+
+export default function TrainerIndex({ trainer }) {
+  const [Trainer, setTrainer] = useState(trainer);
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          arrows: false,
+          centerPadding: "40px",
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "20px",
+          slidesToShow: 1
+        }
+      }
+    ]
+  };
+
   return (
     <div>
       <section className="trainer">
@@ -9,87 +39,26 @@ export default function TrainerIndex() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="trainer-slide">
-                <div className="box-trainer">
-                  <div className="imgtrainer">
-                    <img className="w-100" src="./img/hlv/trang tracy.jpg" />
-                  </div>
-                  <div className="content">
-                    <h3 className="text-center text-danger">TRANG TRACY</h3>
-                    <h5 className="text-center">Chuyên gia thể hình</h5>
-                    <p>
-                      Chứng nhận từ Học Viện Y Học Thể Thao Quốc Gia (NASM) Hoa
-                      Kỳ.
-                    </p>
-                    <p>
-                      Hơn 10 năm kinh nghiệm thay đổi thể hình, từng trực tiếp
-                      huấn luyện cho nhiều ngôi sao.
-                    </p>
-                    <p>
-                      Gặt hái nhiều thành tích về Marathon: hoàn thành đường
-                      chạy 42km trong 5 tiếng tại giải Danang International
-                      Marathon 2015.
-                    </p>
-                  </div>
-                </div>
-                <div className="box-trainer">
-                  <div className="imgtrainer">
-                    <img className="w-100" src="./img/hlv/an nguyen.jpg" />
-                  </div>
-                  <div className="content">
-                    <h3 className="text-center text-danger">AN NGUYỄN</h3>
-                    <h5 className="text-center">Chuyên gia thể hình</h5>
-                    <p>
-                      Chứng nhận từ Học Viện Y Học Thể Thao Quốc Gia (NASM) Hoa
-                      Kỳ.
-                    </p>
-                    <p>
-                      Là người tiên phong trong lĩnh vực về thể hình online tại
-                      Việt Nam. Kênh youtube chia sẻ về kinh nghiệm thể hình của
-                      anh có hơn 100.000 người theo dõi và hàng triệu lượt xem
-                      mỗi clip.
-                    </p>
-                  </div>
-                </div>
-                <div className="box-trainer">
-                  <div className="imgtrainer">
-                    <img className="w-100" src="./img/hlv/linn nguyen.jpg" />
-                  </div>
-                  <div className="content">
-                    <h3 className="text-center text-danger">LINN NGUYỄN</h3>
-                    <h5 className="text-center">HLV Group-X</h5>
-                    <p>
-                      10 năm kinh nghiệm huấn luyện các lớp thể dục nhóm GroupX.
-                    </p>
-                    <p>Cử nhân ngành Giáo dục thể chất và thể thao.</p>
-                    <p>
-                      Đoạt giải thưởng Influencer Asia 2017 hạng mục Health/
-                      Fitness.
-                    </p>
-                  </div>
-                </div>
-                <div className="box-trainer">
-                  <div className="imgtrainer">
-                    <img className="w-100" src="./img/hlv/ricky.jpg" />
-                  </div>
-                  <div className="content">
-                    <h3 className="text-center text-danger">RICKY</h3>
-                    <h5 className="text-center">HLV Group-X</h5>
-                    <p>
-                      Chứng nhận HLV quốc tế Lesmills các bộ môn: BODYCOMBAT,
-                      BODYPUMP.
-                    </p>
-                    <p>
-                      Đoạt nhiều giải thưởng quốc tế về Karate, Kickboxing, Muay
-                      Thai và MMA.
-                    </p>
-                    <p>
-                      Là một trong những người Ấn đầu tiên được tham gia giải vô
-                      địch OCR thế giới.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Slider {...settings}>
+                {Trainer.map(trainer1 => {
+                  return (
+                    <div key={trainer1.id} className="box-trainer">
+                      <div className="imgtrainer">
+                        <img className="w-100" src={trainer1.images} />
+                      </div>
+                      <div className="content">
+                        <h3 className="text-center text-danger">
+                          {trainer1.name}
+                        </h3>
+                        <h5 className="text-center">{trainer1.title}</h5>
+                        <p>{trainer1.quote1}</p>
+                        <p>{trainer1.quote2}</p>
+                        <p>{trainer1.quote3}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
             </div>
           </div>
         </div>

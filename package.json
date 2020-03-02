@@ -12,8 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "firebase": "^7.9.1",
+    "gh-pages": "^2.2.0",
     "next": "^9.2.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-scroll-up-button": "^1.6.4",
+    "react-slick": "^0.25.2"
+  },
+  "devDependencies": {
+    "firestore-export-import": "^0.3.2"
   }
 }

@@ -21,7 +21,7 @@ export default function ModalVideo() {
                 <span aria-hidden="true">×</span>
               </button>
               <div className="embed-responsive embed-responsive-16by9">
-                <iframe className="embed-responsive-item" src allowFullScreen />
+                <iframe className="embed-responsive-item" src="" allowFullScreen />
               </div>
             </div>
           </div>

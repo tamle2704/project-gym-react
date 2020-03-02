@@ -1,271 +1,115 @@
-export default function MainBlog() {
+import React, { useState, useEffect } from "react";
+
+export default function MainBlog({ data }) {
+  const [MainBlog, setMainBlog] = useState(data);
+  useEffect(() => {
+    const category = document.getElementsByClassName("category");
+    for (let i = 0; i < category.length; i++) {
+      category[i].style = "transform: scale(1);opacity: 1;transition: 0.5s;";
+    }
+  });
+  const categories = [
+    "Tất cả",
+    "Yoga",
+    "Giảm cân",
+    "Group-X",
+    "Bài tập nữ",
+    "Bài tập nam",
+    "Dinh dưỡng"
+  ];
+  const onFilter = label => {
+    setActive(label);
+  };
+  const [active, setActive] = useState("Tất cả");
   return (
     <div>
       <section className="main-blog">
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-8 blog-left">
-              <div className="blog-detail">
-                <div className="row">
-                  <div className="col-md-12 col-lg-6 col-12">
-                    <a href="./post.html">
-                      <div
-                        className="blog-img"
-                        style={{ backgroundImage: "url(./img/blog/blog.jpg)" }}
-                      ></div>
-                    </a>
-                  </div>
-                  <div className="col-md-12 col-lg-6 col-12 ">
-                    <div className="blog-content">
-                      <div className="date-tag">
-                        <div className="tag">
-                          <a href="./post.html" className="text-danger">
-                            <i className="fas fa-circle" />
-                            <span className="text-dark"> Bài tập nữ</span>
-                          </a>
-                        </div>
-                        <div className="date-box">
-                          <i className="text-danger far fa-calendar-alt" />
-                          <span> 20/11/2019</span>
-                        </div>
-                      </div>
-                      <a href="./post.html" className="text-dark">
-                        <h3 className="title-blog">
-                          SỞ HỮU EO THON, CƠ XẺ DỌC VỚI 5 BÀI TẬP PLANK ĐƠN GIẢN
-                        </h3>
-                      </a>
-                      <div className="content">
-                        <p>
-                          Tập plank được xem như bài tập "thần thánh" để đốt
-                          cháy mỡ bụng hiệu quả. Hãy cùng Gymzone Fitness khám
-                          phá 5 bài tập plank đơn giản mà cực chất trong bài
-                          viết sau.{" "}
-                        </p>
-                      </div>
-                      <div className="more">
-                        <div className="read-more">
-                          <a className="text-danger" href="./post.html">
-                            XEM THÊM
-                            <i
-                              className="fa fa-angle-right"
-                              aria-hidden="true"
-                            />
-                          </a>
-                        </div>
-                        <div className="share">
-                          <span className="text-dark">Chia sẻ:</span>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-facebook" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-instagram" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-twitter-square" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="blog-detail left">
-                <div className="row">
-                  <div className="col-md-12 col-lg-6 col-12">
-                    <a href="./post.html">
-                      <div
-                        className="blog-img"
-                        style={{
-                          backgroundImage: "url(./img/blog/blog4.jpeg)"
-                        }}
-                      ></div>
-                    </a>
-                  </div>
-                  <div className="col-md-12 col-lg-6 col-12 ">
-                    <div className="blog-content">
-                      <div className="date-tag">
-                        <div className="tag">
-                          <a href="./post.html" className="text-danger">
-                            <i className="fas fa-circle" />
-                            <span className="text-dark"> Gym</span>
-                          </a>
-                        </div>
-                        <div className="date-box">
-                          <i className="text-danger far fa-calendar-alt" />
-                          <span> 20/11/2019</span>
+              {MainBlog &&
+                MainBlog.slice(0, 4).map(blog => {
+                  if (
+                    active === "Tất cả" ||
+                    blog.category
+                      .toLowerCase()
+                      .normalize("NFD")
+                      .replace(/[\u0300-\u036f]/g, "")
+                      .replace(/đ/g, "d")
+                      .replace(/Đ/g, "D") ===
+                      active
+                        .toLowerCase()
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")
+                        .replace(/đ/g, "d")
+                        .replace(/Đ/g, "D")
+                  ) {
+                    return (
+                      <div key={blog.id} className="blog-detail category">
+                        <div className="row">
+                          <div className="col-md-12 col-lg-6 col-12">
+                            <a href="./post.html">
+                              <div
+                                className="blog-img"
+                                style={{
+                                  backgroundImage: `url(${blog.thumbnail})`
+                                }}
+                              ></div>
+                            </a>
+                          </div>
+                          <div className="col-md-12 col-lg-6 col-12 ">
+                            <div className="blog-content">
+                              <div className="date-tag">
+                                <div className="tag">
+                                  <a href="./post.html" className="text-danger">
+                                    <i className="fas fa-circle" />
+                                    <span className="text-dark">
+                                      {blog.category}
+                                    </span>
+                                  </a>
+                                </div>
+                                <div className="date-box">
+                                  <i className="text-danger far fa-calendar-alt" />
+                                  <span> {blog.date}</span>
+                                </div>
+                              </div>
+                              <a href="./post.html" className="text-dark">
+                                <h3 className="title-blog">{blog.title}</h3>
+                              </a>
+                              <div className="content">
+                                <p>{blog.describe}</p>
+                              </div>
+                              <div className="more">
+                                <div className="read-more">
+                                  <a className="text-danger" href="./post.html">
+                                    XEM THÊM
+                                    <i
+                                      className="fa fa-angle-right"
+                                      aria-hidden="true"
+                                    />
+                                  </a>
+                                </div>
+                                <div className="share">
+                                  <span className="text-dark">Chia sẻ:</span>
+                                  <a href="#" className="text-danger">
+                                    <i className="fab fa-facebook" />
+                                  </a>
+                                  <a href="#" className="text-danger">
+                                    <i className="fab fa-instagram" />
+                                  </a>
+                                  <a href="#" className="text-danger">
+                                    <i className="fab fa-twitter-square" />
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <a href="./post.html" className="text-dark">
-                        <h3 className="title-blog">
-                          CÁC BÀI TẬP THỂ HÌNH DÀNH CHO NGƯỜI BẬN RỘN
-                        </h3>
-                      </a>
-                      <div className="content">
-                        <p>
-                          Nếu bạn đang quá bận với công việc của mình, không có
-                          đủ thời gian để tới phòng tập thì hãy tham khảo các
-                          bài tập gym dưới đây tại nhà để duy trì vóc dáng, tăng
-                          cường sức khỏe ....{" "}
-                        </p>
-                      </div>
-                      <div className="more">
-                        <div className="read-more">
-                          <a className="text-danger" href="./post.html">
-                            XEM THÊM
-                            <i
-                              className="fa fa-angle-right"
-                              aria-hidden="true"
-                            />
-                          </a>
-                        </div>
-                        <div className="share">
-                          <span className="text-dark">Chia sẻ:</span>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-facebook" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-instagram" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-twitter-square" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="blog-detail">
-                <div className="row">
-                  <div className="col-md-12 col-lg-6 col-12">
-                    <a href="./post.html">
-                      <div
-                        className="blog-img"
-                        style={{
-                          backgroundImage: "url(./img/blog/blog3.jpeg)"
-                        }}
-                      ></div>
-                    </a>
-                  </div>
-                  <div className="col-md-12 col-lg-6 col-12 ">
-                    <div className="blog-content">
-                      <div className="date-tag">
-                        <div className="tag">
-                          <a href="./post.html" className="text-danger">
-                            <i className="fas fa-circle" />
-                            <span className="text-dark"> Bài tập nam</span>
-                          </a>
-                        </div>
-                        <div className="date-box">
-                          <i className="text-danger far fa-calendar-alt" />
-                          <span> 20/11/2019</span>
-                        </div>
-                      </div>
-                      <a href="./post.html" className="text-dark">
-                        <h3 className="title-blog">
-                          TÌNH TRẠNG CĂNG CƠ LƯNG VÀ CÁCH XỬ LÝ ĐƠN GIẢN, HIỆU
-                          QUẢ
-                        </h3>
-                      </a>
-                      <div className="content">
-                        <p>
-                          Tình trạng căng cơ lưng và cách xử lý đơn giản, hiệu
-                          quả Đau cơ lưng là tình trạng phổ biến hiện nay, hiện
-                          tượng này thường xảy ra.....{" "}
-                        </p>
-                      </div>
-                      <div className="more">
-                        <div className="read-more">
-                          <a className="text-danger" href="./post.html">
-                            XEM THÊM
-                            <i
-                              className="fa fa-angle-right"
-                              aria-hidden="true"
-                            />
-                          </a>
-                        </div>
-                        <div className="share">
-                          <span className="text-dark">Chia sẻ:</span>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-facebook" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-instagram" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-twitter-square" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="blog-detail left">
-                <div className="row">
-                  <div className="col-md-12 col-lg-6 col-12">
-                    <a href="./post.html">
-                      <div
-                        className="blog-img"
-                        style={{ backgroundImage: "url(/img/blog/blog6.jpg)" }}
-                      ></div>
-                    </a>
-                  </div>
-                  <div className="col-md-12 col-lg-6 col-12 ">
-                    <div className="blog-content">
-                      <div className="date-tag">
-                        <div className="tag">
-                          <a href="./post.html" className="text-danger">
-                            <i className="fas fa-circle" />
-                            <span className="text-dark"> Bài tập nữ</span>
-                          </a>
-                        </div>
-                        <div className="date-box">
-                          <i className="text-danger far fa-calendar-alt" />
-                          <span> 20/11/2019</span>
-                        </div>
-                      </div>
-                      <a href="./post.html" className="text-dark">
-                        <h3 className="title-blog">
-                          BẠN ĐÃ BIẾT LÀM THỂ NÀO ĐỂ CHẠY BỀN KHÔNG BỊ MẤT SỨC
-                          CHƯA?
-                        </h3>
-                      </a>
-                      <div className="content">
-                        <p>
-                          Bạn tham gia tập chạy bộ nhưng đã biết làm thế nào để
-                          việc chạy bền không bị mệt và mất sức để chạy được lâu
-                          chứa. Nhằm giúp bạn có kinh nghiệm khi tham gia chạy
-                          bền,...
-                        </p>
-                      </div>
-                      <div className="more">
-                        <div className="read-more">
-                          <a className="text-danger" href="./post.html">
-                            XEM THÊM
-                            <i
-                              className="fa fa-angle-right"
-                              aria-hidden="true"
-                            />
-                          </a>
-                        </div>
-                        <div className="share">
-                          <span className="text-dark">Chia sẻ:</span>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-facebook" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-instagram" />
-                          </a>
-                          <a href="#" className="text-danger">
-                            <i className="fab fa-twitter-square" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    );
+                  }
+                })}
+
               <nav aria-label="Page navigation example" className="pagination">
                 <ul className="pagination">
                   <li className="page-item">
@@ -321,36 +165,32 @@ export default function MainBlog() {
               <article className="categories-blog col-12">
                 <h3 className="title-right">THỂ LOẠI:</h3>
                 <ul className="categories">
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Yoga
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Giảm cân
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Group-X
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Bài tập nữ
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Bài tập nam
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a className="text-dark" href="#">
-                      Dinh dưỡng
-                    </a>
-                  </li>
+                  {categories.map(cate => (
+                    <li
+                      key={cate}
+                      onClick={() => {
+                        if (active !== cate) {
+                          let category = document.getElementsByClassName(
+                            "category"
+                          );
+                          for (let i = 0; i < category.length; i++) {
+                            category[i].style =
+                              "transform: scale(0);opacity: 0;transition: 0.7s;";
+                          }
+                          setTimeout(() => {
+                            onFilter(cate);
+                          }, 500);
+                        }
+                      }}
+                      className={`list ${
+                        cate === active ? "active-button" : ""
+                      }`}
+                    >
+                      <a className="text-dark" href="javascript:void(0)">
+                        {cate}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </article>
               <article className="recent-post col-12">

@@ -1,0 +1,286 @@
+{
+  "index": [
+    {
+      "id": 1,
+      "url": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/banner%2Fbanner.png?alt=media&token=455dc06a-3a2b-4f5a-9b2d-14948461fc03"
+    },
+    {
+      "id": 2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/banner%2Fbanner-index2.png?alt=media&token=63b500fe-1108-4543-8dec-d04945729623"
+    },
+    {
+      "id": 3,
+      "url": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/banner%2Fbanner-index3.png?alt=media&token=4c64000d-2b26-4f69-920c-853046a3434d"
+    },
+    {
+      "id": 4,
+      "url": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/banner%2Fbanner-index4.png?alt=media&token=516eefd6-7575-4d0c-9650-294ce154c565"
+    }
+  ],
+  "course": [
+    {
+      "id": 1,
+      "name": "Yoga",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fyoga.jpg?alt=media&token=8cd84c30-cfe8-45c3-b1ad-9698701a7146",
+      "category": ["group-x"]
+    },
+    {
+      "id": 2,
+      "name": "Giảm cân",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fgiamcan.jpg?alt=media&token=2ca08036-073e-4a4d-817b-ed8fec6f4e68",
+      "category": ["giảm cân"]
+    },
+    {
+      "id": 3,
+      "name": "Kickfit",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fkickfit.jpg?alt=media&token=ee83891a-4a55-41bd-ad2a-28776c13f5e7",
+      "category": ["giảm cân", "võ thuật"]
+    },
+    {
+      "id": 4,
+      "name": "Dance",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fdance.jpg?alt=media&token=4795922b-4c87-4c4b-a0ff-5935aa5ace29",
+      "category": ["group-x", "giảm cân"]
+    },
+    {
+      "id": 5,
+      "name": "Huấn luyện cá nhân",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fhlcn.jpg?alt=media&token=6a711b02-4a90-4a52-ae94-0275d38722a9",
+      "category": ["căng cơ", "giảm cân", "tăng cân"]
+    },
+    {
+      "id": 6,
+      "name": "Giảm căng cơ",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fgiamcangco.jpg?alt=media&token=2e5bea62-e395-4d17-a1c4-b84fb58dc899",
+      "category": ["căng cơ"]
+    },
+    {
+      "id": 7,
+      "name": "Battle rope",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fbattlerope.jpg?alt=media&token=f7c1384b-e732-443d-9f29-a510f00993ac",
+      "category": ["giảm cân", "tăng cân"]
+    },
+    {
+      "id": 8,
+      "name": "Ptx-2",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2FPTX2.png?alt=media&token=33f65fb6-ce2e-490f-b49e-971959ea4c23",
+      "category": ["tăng cân", "giảm cân"]
+    },
+    {
+      "id": 9,
+      "name": "Muay thái",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/course%2Fmuay.jpg?alt=media&token=29324d16-8529-4aaf-a78b-10cc507c7385",
+      "category": ["võ thuật", "giảm cân", "tăng cân"]
+    }
+  ],
+  "schedule": [
+    {
+      "id": 1,
+      "name": "Yoga",
+      "time": "6:00AM-8:00AM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fyoga.png?alt=media&token=47240fb9-a8a9-4533-b8ac-f5cd12dbfb6e",
+      "trainer": "Trang Tracy",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cardio",
+      "time": "8:00AM-10:00AM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fexercise.png?alt=media&token=b78ffc88-c16a-4928-a778-17b50905225b",
+      "trainer": "Linn Nguyễn",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "PTX-2",
+      "time": "10:00AM-12:00AM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fwaist.png?alt=media&token=8ffa2776-ebc1-4915-879c-225c904f2842",
+      "trainer": "An Nguyễn",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Kickfit",
+      "time": "12:00AM-1:00PM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fboxing-gloves.png?alt=media&token=85d60fe7-40af-4a7d-b726-c538bf808b1b",
+      "trainer": "Ricky",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sexy Dance",
+      "time": "3:00PM-5:00PM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fzumba.png?alt=media&token=8f7d0f15-354b-4fdb-9674-6d94d284f63a",
+      "trainer": "Linh Chi",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Battle Rope",
+      "time": "5:00PM-6:00PM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Ficons8-cloud-100.png?alt=media&token=4488c917-8228-44b2-96a2-ee88383d2d09",
+      "trainer": "An Nguyễn",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Zumba",
+      "time": "6:00PM-7:00PM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fzumba.png?alt=media&token=8f7d0f15-354b-4fdb-9674-6d94d284f63a",
+      "trainer": "Linh Chi",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Muay Thái",
+      "time": "7:00PM-9:00PM",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/icon%2Fmuay-thai.png?alt=media&token=ac4c2a87-94f0-42a8-ac73-0be863d71e98",
+      "trainer": "Ricky",
+      "timetable": [
+        "thứ ba",
+        "thứ tư",
+        "thứ năm",
+        "thứ sáu",
+        "thứ bảy",
+        "chủ nhật"
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "title": "SỞ HỮU EO THON, CƠ XẺ DỌC VỚI 5 BÀI TẬP PLANK ĐƠN GIẢN",
+      "category": "Bài tập nữ",
+      "date": "",
+      "describe": "Tập plank được xem như bài tập thần thánh để đốt cháy mỡ bụng hiệu quả. Hãy cùng Gymzone Fitness khám phá 5 bài tập plank đơn giản mà cực chất trong bài viết sau.",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog.jpg?alt=media&token=99a82b13-a7fd-42a8-b5ee-fd3782476031",
+      "thumbnailIndex": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog-index1.png?alt=media&token=5c4b0db1-540c-40ef-bce4-8a7f5da8d04c"
+    },
+    {
+      "title": "CÁC BÀI TẬP THỂ HÌNH DÀNH CHO NGƯỜI BẬN RỘN",
+      "category": "Bài tập nam",
+      "date": "",
+      "describe": "Nếu bạn đang quá bận với công việc của mình, không có đủ thời gian để tới phòng tập thì hãy tham khảo các bài tập gym dưới đây tại nhà để duy trì vóc dáng, tăng cường sức khỏe ....",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog4.jpeg?alt=media&token=313f037a-ed32-4b8e-bb22-5c24e5a4b11c",
+      "thumbnailIndex": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog-index2.png?alt=media&token=eb46d37a-c6fd-4aa1-8264-6bdc88376be2"
+    },
+
+    {
+      "title": "TÌNH TRẠNG CĂNG CƠ LƯNG VÀ CÁCH XỬ LÝ ĐƠN GIẢN, HIỆU QUẢ",
+      "category": "Bài tập nam",
+      "date": "",
+      "describe": "Tình trạng căng cơ lưng và cách xử lý đơn giản, hiệu quả Đau cơ lưng là tình trạng phổ biến hiện nay, hiện tượng này thường xảy ra.....",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog3.jpeg?alt=media&token=e32899ec-73a8-4baf-867e-136fe6a4ec34",
+      "thumbnailIndex": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog-index3.jpg?alt=media&token=b7993721-93ab-4faa-b6ee-eb11577cb0b2"
+    },
+    {
+      "title": "BẠN ĐÃ BIẾT LÀM THỂ NÀO ĐỂ CHẠY BỀN KHÔNG BỊ MẤT SỨC CHƯA?",
+      "category": "Bài tập nữ",
+      "date": "",
+      "describe": "Bạn tham gia tập chạy bộ nhưng đã biết làm thế nào để việc chạy bền không bị mệt và mất sức để chạy được lâu chứa. Nhằm giúp bạn có kinh nghiệm khi tham gia chạy bền,...",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fblog6.jpg?alt=media&token=2b8e05fb-7897-476b-a644-09543f8bcaba",
+      "thumbnailIndex": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2FCach-chay-ben-khong-mat-suc.jpg?alt=media&token=34f0c341-8b36-4c1f-9e24-bc9373d81045"
+    },
+    {
+      "title": "TẬP YOGA TẠI NHÀ ĐÚNG CÁCH CẦN THỰC HIỆN ĐÚNG 6 NGUYÊN TẮC VÀNG",
+      "category": "Yoga",
+      "date": "",
+      "describe": "Việc tập yoga tại nhà đúng cách sẽ giúp bạn tránh được những chấn thương không đáng có. Cùng Gymzone tìm hiểu 6 nguyên tắc tập Yoga tại nhà đúng cách.",
+      "thumbnail": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fyoga1.jpg?alt=media&token=0015ef1b-9988-4256-9be5-f79e7576839e",
+      "thumbnailIndex": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/blog%2Fyoga.jpg?alt=media&token=83780faa-2fa0-4cf1-988a-eb7a550fab1b"
+    }
+  ],
+  "trainer": [
+    {
+      "name": "Trang Tracy",
+      "title": "Chuyên gia thể hình",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/hlv%2Ftrang%20tracy.jpg?alt=media&token=eaffcd04-0d03-447e-8a1e-9146ade4250c",
+      "quote1": "Chứng nhận từ Học Viện Y Học Thể Thao Quốc Gia (NASM) Hoa Kỳ.",
+      "quote2": "Hơn 10 năm kinh nghiệm thay đổi thể hình, từng trực tiếp huấn luyện cho nhiều ngôi sao.",
+      "quote3": "Gặt hái nhiều thành tích về Marathon: hoàn thành đường chạy 42km trong 5 tiếng tại giải Danang International Marathon 2015."
+    },
+    {
+      "name": "An Nguyễn",
+      "title": "Chuyên gia thể hình",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/hlv%2Fan%20nguyen.jpg?alt=media&token=c7ba2f8f-bfa8-4259-ad7a-8791bd2ea27a",
+      "quote1": "Chứng nhận từ Học Viện Y Học Thể Thao Quốc Gia (NASM) Hoa Kỳ.",
+      "quote2": "Là người tiên phong trong lĩnh vực về thể hình online tại Việt Nam. Kênh youtube chia sẻ về kinh nghiệm thể hình của anh có hơn 100.000 người theo dõi và hàng triệu lượt xem mỗi clip..",
+      "quote3": ""
+    },
+    {
+      "name": "LINN NGUYỄN",
+      "title": "HLV Group-X",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/hlv%2Flinn%20nguyen.jpg?alt=media&token=14527d60-2291-4be7-a981-b7599affe393",
+      "quote1": "10 năm kinh nghiệm huấn luyện các lớp thể dục nhóm GroupX.",
+      "quote2": "Cử nhân ngành Giáo dục thể chất và thể thao.",
+      "quote3": "Đoạt giải thưởng Influencer Asia 2017 hạng mục Health/ Fitness."
+    },
+    {
+      "name": "RICKY",
+      "title": "HLV Group-X",
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/hlv%2Fricky.jpg?alt=media&token=c6bf540d-57bc-4680-bd31-b8347f1ba27c",
+      "quote1": "Chứng nhận HLV quốc tế Lesmills các bộ môn: BODYCOMBAT, BODYPUMP.",
+      "quote2": "Đoạt nhiều giải thưởng quốc tế về Karate, Kickboxing, Muay Thai và MMA.",
+      "quote3": "Là một trong những người Ấn đầu tiên được tham gia giải vô địch OCR thế giới."
+    }
+  ],
+  "story": [
+    {
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/story%2Fstory1.png?alt=media&token=81b1e388-b159-4511-a361-80f09effa2f0"
+    },
+    {
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/story%2Fstory2.png?alt=media&token=fc58ee77-f511-4c05-a7ab-2972bf182489"
+    },
+    {
+      "images": "https://firebasestorage.googleapis.com/v0/b/project-gym-react.appspot.com/o/story%2Fstory3.png?alt=media&token=e6ee647a-da8d-4c76-85b0-933a697c3d59"
+    }
+  ]
+}

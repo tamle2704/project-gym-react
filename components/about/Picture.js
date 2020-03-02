@@ -1,4 +1,35 @@
+import Slider from "react-slick";
+
 export default function Picture() {
+  const settings = {
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    dots: false,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 2,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1,
+                dots: false
+            }
+        }]
+  };
+  
   return (
     <div>
       <section className="picture">
@@ -9,7 +40,7 @@ export default function Picture() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div
+              <Slider {...settings}
                 className="images-slide"
                 data-toggle="modal"
                 data-target="#abc"
@@ -35,7 +66,7 @@ export default function Picture() {
                 <li data-target="#carouselExampleIndicators" data-slide-to={6}>
                   <img className="w-100" src="img/phongtap/phongtap7.jpg" />
                 </li>
-              </div>
+              </Slider>
             </div>
           </div>
         </div>

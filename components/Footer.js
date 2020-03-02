@@ -30,9 +30,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <a id="button">
-            <i className="far fa-arrow-alt-circle-up" />
-          </a>
+          
         </footer>
         <div className="container-fluid last-footer">
           <div className="container">

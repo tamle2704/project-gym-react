@@ -7,7 +7,7 @@ export default function AboutUs() {
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div className="text-center">
                 {" "}
-                <img className="w-100" src="img/about us/index.png" alt />{" "}
+                <img className="w-100" src="img/about us/index.png" alt="" />{" "}
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">

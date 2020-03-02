@@ -5,26 +5,98 @@ import TrainerIndex from "../components/index/Trainer-index";
 import PromoIndex from "../components/index/Promo-index";
 import ModalVideo from "../components/index/Modal-video";
 import StoryIndex from "../components/index/Story-index";
-import Registration from "../components/Registration";
+import Registration from "../components/modal + register/Registration";
 import BlogIndex from "../components/index/Blog-index";
 import Wrap from "../components/index/Wrap";
 import Layout from "../components/Head";
+import Modal from "../components/modal + register/Modal";
+import BackToTop from "../components/backToTop";
 
-export default function Index() {
+import {
+  firebaseBanner,
+  firebaseCourse,
+  firebaseTrainer,
+  firebaseStory,
+  firebaseBlog
+} from "../components/firebase/firebase";
+
+export default function Index({ banner, course, trainer, story, blog }) {
   return (
     <div>
       <Layout>
         <Wrap />
-        <BannerCarousel />
-        <CourseIndex />
+        <BannerCarousel banner={banner} />
+        <CourseIndex course={course} />
         <AboutIndex />
-        <TrainerIndex />
+        <TrainerIndex trainer={trainer} />
         <PromoIndex />
+        <Modal />
         <ModalVideo />
-        <StoryIndex />
+        <StoryIndex story={story} />
         <Registration />
-        <BlogIndex />
+        <BlogIndex blog={blog} />
+        <BackToTop />
       </Layout>
     </div>
   );
 }
+
+Index.getInitialProps = async function() {
+  let result = await firebaseBanner
+    .once("value")
+    .then(snapshot => {
+      return snapshot.val();
+    })
+
+    .catch(() => {
+      return [];
+    });
+
+  let result1 = await firebaseCourse
+    .once("value")
+    .then(snapshot => {
+      return snapshot.val();
+    })
+
+    .catch(() => {
+      return [];
+    });
+
+  let result2 = await firebaseTrainer
+    .once("value")
+    .then(snapshot => {
+      return snapshot.val();
+    })
+
+    .catch(() => {
+      return [];
+    });
+
+  let result3 = await firebaseStory
+    .once("value")
+    .then(snapshot => {
+      return snapshot.val();
+    })
+
+    .catch(() => {
+      return [];
+    });
+
+  let result4 = await firebaseBlog
+    .once("value")
+    .then(snapshot => {
+      return snapshot.val();
+    })
+
+    .catch(() => {
+      return [];
+    });
+  return {
+    banner: result,
+    course: result1,
+    trainer: result2,
+    story: result3,
+    blog: result4
+  };
+};
+

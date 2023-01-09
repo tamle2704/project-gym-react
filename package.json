@@ -23,6 +23,6 @@
     "react-slick": "^0.25.2"
   },
   "devDependencies": {
-    "firestore-export-import": "^0.3.2"
+    "firestore-export-import": "^1.3.5"
   }
 }
